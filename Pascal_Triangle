@@ -1,0 +1,35 @@
+using System;
+
+namespace more_Exercise___Pascal_Triangle
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int input = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(1);
+            PascalTriangle(input);
+
+        }
+
+        private static void PascalTriangle(int input)
+        {
+            for (int i = 1; i < input; i++)
+            {
+                int value = 1;
+                Console.Write(value + " ");
+
+                for (int j = 1; j <= i; j++)
+                {
+                    
+                    value = value * (i - j + 1) / j;
+                    Console.Write(value + " ");
+
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
